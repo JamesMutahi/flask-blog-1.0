@@ -5,7 +5,7 @@ class Config:
     '''
     General configuration parent class
     '''
-    # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://roy:1234567@localhost/blog1.0'
+    # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://jim:12139@localhost/blog'
     SECRET_KEY = os.environ.get('SECRET_KEY')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     MAIL_SERVER = 'smtp.gmail.com'
@@ -13,7 +13,7 @@ class Config:
     MAIL_USE_TLS = True
     MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
-    SUBJECT_PREFIX = 'Pitches'
+    SUBJECT_PREFIX = 'Posts'
     SENDER_EMAIL = 'vipi199ping@gmail.com'
 
 
@@ -24,7 +24,7 @@ class ProdConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://roy:1234567@localhost/blog1.0'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://jim:12139@localhost/blog'
 
 
 class TestConfig(Config):
@@ -45,7 +45,7 @@ class DevConfig(Config):
         Config: The parent configuration class with General configuration settings
     '''
 
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://roy:1234567@localhost/blog1.0'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://jim:12139@localhost/blog'
     DEBUG = True
 
 
