@@ -6,7 +6,8 @@ class Config:
     General configuration parent class
     '''
     # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://jim:12139@localhost/blog'
-    SECRET_KEY = os.environ.get('SECRET_KEY')
+    SECRET_KEY = os.urandom(32)
+    SECRET_KEY = SECRET_KEY
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     MAIL_SERVER = 'smtp.gmail.com'
     MAIL_PORT = 587
